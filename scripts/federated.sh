@@ -4,17 +4,17 @@ accelerate launch \
 --num_processes 4 \
 --gpu_ids 0,1,2,3 \
 ../main.py \
---input_path [Your Input Path] \
---save_dir [Your Save Directory] \
+--input_path "C:/Users/Windows/Documents/Meri/input_data" \
+--save_dir "C:/Users/Windows/Documents/Meri/federated_results" \
 --train_type federated \
---algorithm fedavg \ # Choose from fedavg, fedprox, fedbn, fedpxn
+--algorithm fedavg \
 --type_token \
 --dpe \
 --pos_enc \
 --n_layers 2 \
 --batch_size 64 \
---wandb_project_name [Your Wandb Project Name] \
---wandb_entity_name [Your Wandb Entity Name] \
+--wandb_project_name meri_federated_exp \
+--wandb_entity_name meri_lab \
 --seed 42 \
 --src_data mimiciii_cv mimiciii_mv mimiciv eicu_south eicu_west \
 --mixed_precision bf16
